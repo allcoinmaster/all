@@ -1,0 +1,7 @@
+#!/bin/bash   
+sudo chmod u+x share/genbuild.sh
+sudo chmod u+x src/leveldb/build_detect_platform
+sudo chmod u+x ./autogen.sh && ./autogen.sh
+sudo ./configure --disable-dependency-tracking --enable-tests=no --without-gui --without-miniupnpc
+sudo make
+sudo make install
